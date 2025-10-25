@@ -1,0 +1,91 @@
+[project]
+name = "smolql"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10.14"
+dependencies = []
+
+
+
+[tool.mypy]
+# Specify the directory containing the files to check
+files = "./src"
+
+# Emit a warning when returning Any
+warn_return_any = false
+
+# allow generic parameters expecting abstract classes
+disable_error_code = "type-abstract"
+
+# Warn about unused configurations in the mypy configuration
+warn_unused_configs = true
+
+# Exclude files matching this regex from type checking
+exclude = ".*test_.*pattern_matching"
+
+# Disallow function definitions without type annotations
+disallow_untyped_defs = true
+
+# Disallow incomplete type hints in function definitions
+disallow_incomplete_defs = true
+
+# Allow redefinition of variables (useful in some cases)
+allow_redefinition = true
+
+# Check untyped functions as if they were fully typed
+check_untyped_defs = true
+
+# Disallow function calls without type annotations
+disallow_untyped_calls = true
+
+# Disallow subclassing Any
+disallow_subclassing_any = false
+
+# Ignore errors in all files
+ignore_errors = false
+
+# Ignore missing imports (useful when third-party stubs are missing)
+ignore_missing_imports = true
+
+# Disable implicit re-export of imported symbols
+implicit_reexport = false
+
+# Enable strict Optional checks
+strict_optional = true
+
+# Enable strict equality checks (e.g., None comparisons)
+strict_equality = true
+
+# Disallow implicit use of Optional
+no_implicit_optional = true
+
+# Enable tracking of partially typed variables
+local_partial_types = true
+
+# Emit a warning for functions missing return statements
+warn_no_return = true
+
+# Do not warn about unused `# type: ignore` comments
+warn_unused_ignores = false
+
+# Emit a warning for redundant casts
+warn_redundant_casts = true
+
+# Emit a warning for unreachable code
+warn_unreachable = true
+
+# Specify a plugin for SQLAlchemy support
+plugins = []
+
+# Show detailed traceback for debugging MyPy errors
+show_traceback = true
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.2",
+    "ruff>=0.14.2",
+]
+test = [
+    "pytest>=8.4.2",
+]
