@@ -9,7 +9,7 @@ def count(
 ) -> Operator:
     """Create a COUNT operator."""
     if field is None:
-        args = [RawSQL(_sql="*")]
+        args: list[interfaces.ISQLNode] = [RawSQL(_sql="*")]
     else:
         args = [_to_sql_node(field)]
     return Operator(_operator_name="COUNT", _arguments=args, _alias=alias)

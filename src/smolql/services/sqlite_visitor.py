@@ -1,5 +1,6 @@
 from smolql.domain import interfaces
 
+
 class SQLiteVisitor(interfaces.IVisitor):
     """Visitor for SQLite dialect."""
 

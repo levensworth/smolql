@@ -150,4 +150,3 @@ class PostgreSQLVisitor(interfaces.IVisitor):
     def visit_raw_sql(self, raw_sql: interfaces.IRawSQL) -> str:
         """Visit a raw SQL node."""
         return raw_sql.sql
-

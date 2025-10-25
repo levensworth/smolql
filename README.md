@@ -5,7 +5,7 @@ A micro SQL statement builder library for Python. **smolql** allows you to easil
 ## Features
 
 - 🔧 **Easy to use**: Simple, fluent API for building SQL queries
-- 🎯 **Type-safe**: Fully typed Python code with mypy support
+- 🎯 **Type-safe**: Fully typed Python code with mypy support and PEP 561 compatibility
 - 🔄 **Multi-dialect**: Support for PostgreSQL and SQLite (extensible for more)
 - 🧩 **Extensible**: Easy to add new operators and dialects
 - 📦 **Lightweight**: Minimal dependencies, focused on query building
